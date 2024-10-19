@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Contact Us
+{% endblock title %}
+
+{% block content %}
+    <div class="container mt-2" style="margin-top: 5.9rem !important;">
+        <form action="">
+            <h2 class="text-center ">Leave a message</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Your Name<span style="color: red;">*</span></label>
+                    <input type="text" name="name" class="form-control" id="username" placeholder="Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email<span style="color: red;">*</span></label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="email" required>
+                </div>
+                
+            </div>
+            <div class="col-md-6" >
+                <div class="mb-3" style="height: 100%;width: 100%;" >
+                    <label for="comment" class="form-label">Any message<span style="color: red;">*</span></label>
+                    <textarea name="message"  class="form-control" id="comment" required placeholder="Type message"></textarea>
+                  </div>
+            </div>
+            <button type="submit" class="btn btn-dark text-light mb-3">Submit</button>
+        </div>
+    </form>
+    </div>
+{% endblock content %}

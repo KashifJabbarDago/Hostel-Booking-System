@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Book Hostel Vacancy
+{% endblock title %}
+
+{% block content %}
+<form action="" autocapitalize="false" method="post">
+    {% csrf_token %}
+    <div class="container mt-3" style="margin-top: 5.9rem !important;">
+        <h2 class="text-center">
+            Fill below required Information
+        </h2>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Your full name</label>
+                    <input type="text" name="name" class="form-control" id="username" placeholder="Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="father" class="form-label">Your Father full name</label>
+                    <input type="text" name="father" class="form-control" id="father" placeholder="Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="nic" class="form-label">Your Father or Your CNIC</label>
+                    <input type="text" name="nic" class="form-control" id="nic" placeholder="CNIC" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="mobile" class="form-label">Active Mobile Number</label>
+                    <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Number" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="mobiles" class="form-label">Your City Select below</label>
+                    <select name="select_name" id="mobiles" class="form-control dropdown option" required>
+                        <option value="ok" aria-readonly="tru">----</option>
+                        <option value="hyd">Hyderabad</option>
+                        <option value="Larkana">Larkana</option>
+                        <option value="Shidatpur">Shidatpur</option>
+                        <option value="Nawabshah">Nawabshah</option>
+                        <option value="Hala">Hala</option>
+                        <option value="Sewan">Sewan</option>
+                        <option value="Dadu">Dadu</option>
+                        <option value="MirpurKhas">MirpurKhas</option>
+                        <option value="Tando Allahyar">Tando Allahyar</option>
+                        <option value="Badin">Badin</option>
+                        <option value="Umerkoat">Umerkoat</option>
+                        <option value="Mithi">Mithi</option>
+                        <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="pass" class="form-label">Password</label>
+                    <input type="password" name="pass" class="form-control" id="pass" placeholder="Password" required>
+                  </div>
+            </div>
+        </div>
+        <h2>Hostel Information</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="location" class="form-label">Desired Location</label>
+                    <input type="text" name="location" class="form-control" id="location" placeholder="Location" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="price" class="form-label">Your expected living price</label>
+                    <input type="text" name="price" class="form-control" id="price" placeholder="Pkr" required>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="room" class="form-label">You want Metres based Room or Bed Based</label>
+                    <input type="text" name="room" class="form-control" id="room" placeholder="Room" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="vacancy" class="form-label">Number of Vanancies you want</label>
+                    <input type="number" name="vacancy" class="form-control" id="vacancy" placeholder="Enter vacancy" required>
+                  </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-dark text-light mb-3">Book Vacancy</button>
+    </div>
+</form>
+{% endblock content %}
